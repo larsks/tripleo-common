@@ -640,10 +640,10 @@ container_images_template:
 - imagename: "{{namespace}}/{{name_prefix}}nova-serialproxy{{name_suffix}}:{{tag}}"
   image_source: kolla
   params:
-  - DockerNovaSerialproxyConfigImage
-  - DockerNovaSerialproxyImage
+  - DockerNovaSerialProxyConfigImage
+  - DockerNovaSerialProxyImage
   services:
-  - OS::TripleO::Services::NovaSerialproxy
+  - OS::TripleO::Services::NovaSerialProxy
 
 - imagename: "{{namespace}}/{{name_prefix}}novajoin-notifier{{name_suffix}}:{{tag}}"
   image_source: kolla

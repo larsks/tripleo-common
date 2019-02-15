@@ -485,6 +485,12 @@ RUN mkdir -p /openstack && \
     chmod a+rx /openstack/healthcheck
 {% endblock %}]
 
+{% block nova_serialproxy_footer %}
+RUN mkdir -p /openstack && \
+    ln -s /usr/share/openstack-tripleo-common/healthcheck/nova-serial-proxy /openstack/healthcheck && \
+    chmod a+rx /openstack/healthcheck
+{% endblock %}]
+
 {% block nova_scheduler_footer %}
 RUN mkdir -p /openstack && \
     ln -s /usr/share/openstack-tripleo-common/healthcheck/nova-scheduler /openstack/healthcheck && \
